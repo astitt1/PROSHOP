@@ -1,0 +1,15 @@
+{
+  "name": "proshopecommerce",
+  "version": "1.0.0",
+  "description": "eCommerce MERN App",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
