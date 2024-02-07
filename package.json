@@ -9,8 +9,11 @@
     "nodemon": "^3.0.3"
   },
   "scripts": {
-    "start": "nodemon backend/server.js"
-  },
+    "start": "nodemon backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix fontend",
+    "dev":"concurrently \"npm run server\" \"npm run client\""
+    },
   "author": "",
   "license": "ISC"
 }
