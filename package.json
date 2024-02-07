@@ -12,8 +12,11 @@
     "start": "nodemon backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix fontend",
-    "dev":"concurrently \"npm run server\" \"npm run client\""
-    },
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.4.1"
+  }
 }
