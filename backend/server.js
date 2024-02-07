@@ -3,9 +3,12 @@ import dotenv from 'dotenv'
 dotenv.config()
 import products from './data/products.js';
 const app = express()
+import cors from 'cors'
+
 const port = process.env.PORT || 5000;
 
 
+app.use(cors());
 
 app.get('/', (req, res)=>{
     res.send('api...')
