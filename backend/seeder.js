@@ -6,6 +6,11 @@ import products from "./data/products.js";
 import Product from "./models/productModel.js";
 import User from "./models/userModel.js";
 import Order from "./models/orderModel.js";
+//connect DB
+import connectDB from './config/db.js'
+dotenv.config()
+
+await connectDB()
 
 const importData = async () => {
   try {
@@ -15,9 +20,9 @@ const importData = async () => {
     await User.deleteMany();
 
     //create users
-    const createUsers = await User.insertMany(users);
+    const createdUsers = await User.insertMany(users);
     //get the admin user
-    const adminUser = createdUser[0]._id;
+    const adminUser = createdUsers[0]._id;
 
     //insert the products
     const sampleProducts = products.map((product) => {
