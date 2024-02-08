@@ -4,9 +4,9 @@ const reviewSchema = mongoose.Schema(
   {
     user: {
       //the user leaving a review
-      type: Moncoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
-      ref: User, //user collection
+      ref: 'User', //user collection
     },
     name: {
       type: String,
@@ -25,9 +25,9 @@ const productSchema = new mongoose.Schema(
   {
     user: {
       //admin user
-      type: Moncoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
-      ref: User, //user collection
+      ref: 'User', //user collection
     },
     name: {
       type: String,
